@@ -6,11 +6,9 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Shader;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -30,7 +28,7 @@ public class FerryProgressView extends View {
     private Context context;
     private int radio;
     private int miniRadio;
-    private float x, y;
+    private float btnX, btnY;
     private double degrees;
     private double angle;
     private boolean isTouchOnArc;
@@ -94,7 +92,7 @@ public class FerryProgressView extends View {
         //外环上的小圆
 
 
-        canvas.drawCircle(x, y, miniRadio, btnPaint);
+        canvas.drawCircle(btnX, btnY, miniRadio, btnPaint);
         // canvas.drawCircle(x, y, ciclieRadio, ciclePaint);
 
 
@@ -111,7 +109,7 @@ public class FerryProgressView extends View {
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                if (isTouchMiniCicle(event)) {
+                if (isTouchBtn(event)) {
                     updateProgress(event.getX(), event.getY());
                     isTouchOnArc = true;
                 }
@@ -144,6 +142,16 @@ public class FerryProgressView extends View {
         }
         return false;
     }
+    private boolean isTouchBtn(MotionEvent event) {
+        float x = event.getX();
+        float y = event.getY();
+if (x>(btnX-miniRadio)&&x<(btnX+miniRadio)&&y>(btnY-miniRadio)&&y<(btnY+miniRadio)){
+    return true;
+}
+
+
+        return false;
+    }
 
     private void updateProgress(float eventX, float eventY) {
         int curX = (int) (eventX - cx);
@@ -156,16 +164,16 @@ public class FerryProgressView extends View {
             curY = -curY;
             degrees = Math.atan2(curY, curX);
             angle = Math.toDegrees(Math.PI / 2 - degrees);
-            x = (float) (cx + radio * Math.cos(degrees));
-            y = (float) (cy - radio * Math.sin(degrees));
+            btnX = (float) (cx + radio * Math.cos(degrees));
+            btnY = (float) (cy - radio * Math.sin(degrees));
             lastQuadrant = 1;
         } else
             //第二象限
             if (curX > 0 && curY > 0) {
                 degrees = Math.atan2(curY, curX);
                 angle = Math.toDegrees(degrees) + 90;
-                x = (float) (cx + radio * Math.cos(degrees));
-                y = (float) (cy + radio * Math.sin(degrees));
+                btnX = (float) (cx + radio * Math.cos(degrees));
+                btnY = (float) (cy + radio * Math.sin(degrees));
                 lastQuadrant = 2;
             } else
                 //第三象限
@@ -173,8 +181,8 @@ public class FerryProgressView extends View {
                     curX = -curX;
                     degrees = Math.atan2(curY, curX);
                     angle = Math.toDegrees(Math.PI / 2 - degrees) + 180;
-                    x = (float) (cx - radio * Math.cos(degrees));
-                    y = (float) (cy + radio * Math.sin(degrees));
+                    btnX = (float) (cx - radio * Math.cos(degrees));
+                    btnY = (float) (cy + radio * Math.sin(degrees));
                     lastQuadrant = 3;
                 } else
                     //第四象限
@@ -187,8 +195,8 @@ public class FerryProgressView extends View {
                         curY = -curY;
                         degrees = Math.atan2(curY, curX);
                         angle = Math.toDegrees(degrees) + 270;
-                        x = (float) (cx - radio * Math.cos(degrees));
-                        y = (float) (cy - radio * Math.sin(degrees));
+                        btnX = (float) (cx - radio * Math.cos(degrees));
+                        btnY = (float) (cy - radio * Math.sin(degrees));
                         lastQuadrant = 4;
                     }
 
@@ -219,8 +227,8 @@ public class FerryProgressView extends View {
         miniCiclePaint.setStrokeWidth(cicleWidth);
 
 
-        x = (float) (cx + radio * Math.sin(degrees));
-        y = (float) (cy - radio * Math.cos(degrees));
+        btnX = (float) (cx + radio * Math.sin(degrees));
+        btnY = (float) (cy - radio * Math.cos(degrees));
         LinearGradient linearGradient = new LinearGradient(cx, cy - radio, cx + radio, cy + radio, new int[]{
                 Color.rgb(0, 221, 255),
                 Color.rgb(255, 255, 255),
