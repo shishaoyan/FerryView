@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Shader;
 import android.util.AttributeSet;
@@ -16,7 +17,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 public class FerryProgressView extends View {
-
+    private ProcessListener processListener;
     private float cicleWidth;
     private int defaultWidth;
     private int defaultHeight;
@@ -97,11 +98,13 @@ public class FerryProgressView extends View {
         // canvas.drawCircle(x, y, ciclieRadio, ciclePaint);
 
 
-        String stt = ((int) angle) + "";
+        String stt = ((int)  (angle/359*100)) + "";
         int length = (int) textPaint.measureText(stt);
         int asent = (int) textPaint.getFontMetrics().ascent;
         canvas.drawText(stt + "°", cx - length / 2, cy - asent / 2, textPaint);
-
+        if (processListener!=null){
+            processListener.updatePorcess((int) (angle/359*100));
+        }
     }
 
     @Override
@@ -248,5 +251,12 @@ public class FerryProgressView extends View {
             sizeHeight = defaultHeight;
         }
         setMeasuredDimension(sizeWidth, sizeHeight);
+    }
+
+    interface ProcessListener{
+        void updatePorcess(int process);
+    }
+    public void setOnProcessListener(ProcessListener processListener){
+        this.processListener = processListener;
     }
 }
