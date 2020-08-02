@@ -2,6 +2,11 @@
 
 自定义view 集中营。
 
+大纲：
+- FerryProcessView 可拖动控制的圆环控制条
+- FlowLayout 流式布局
+
+
 ### 1、FerryProcessView
 
 可拖动控制的圆环控制条
