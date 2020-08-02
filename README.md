@@ -1,9 +1,11 @@
 # FerryView
 
-> 自定义view 集中营。
+自定义view 集中营。
 
 ### 1、FerryProcessView
 
-<video src="./ferry_processview.mp4" width="800px" height="600px" controls="controls"></video>
+可拖动控制的圆环控制条
+
+![FerryProcessView](/效果图/ferry_processview/ferry_processview.gif)
 
 
