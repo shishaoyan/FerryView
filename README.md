@@ -21,4 +21,4 @@
 
 ### 3、FerryLoadingView
 
-![FerryProcessView](/效果图/ferry_laodingview/1596967518414040.gif)
+![FerryProcessView](/效果图/ferry_loadingview/1596967518414040.gif)
