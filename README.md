@@ -20,6 +20,4 @@
 ![FerryFlowLayout](/效果图/ferry_flowlayout/flowlayout.jpg)
 
 ### 3、FerryLoadingView
-
-![FerryProcessView-w150](/效果图/ferry_loadingview/1596967518414040.gif)
-<img src="/效果图/ferry_loadingview/1596967518414040.gif" width = "80%" />
+<img src="/效果图/ferry_loadingview/1596967518414040.gif" width = "50%" />
