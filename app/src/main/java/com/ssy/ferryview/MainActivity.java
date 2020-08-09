@@ -3,9 +3,13 @@ package com.ssy.ferryview;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 
+import com.ssy.ferryview.editview.EditViewActivity;
 import com.ssy.ferryview.flowlayout.FlowLayoutActivity;
 import com.ssy.ferryview.loadingview.LoadingActivity;
 import com.ssy.ferryview.progressview.ProcessViewActivity;
@@ -18,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_process).setOnClickListener(this);
         findViewById(R.id.btn_flowlayout).setOnClickListener(this);
         findViewById(R.id.btn_loading).setOnClickListener(this);
+        findViewById(R.id.btn_editview).setOnClickListener(this);
 
     }
 
@@ -35,6 +40,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case R.id.btn_loading:
                 Intent intent2 = new Intent(MainActivity.this, LoadingActivity.class);
                 startActivity(intent2);
+                break;
+                case R.id.btn_editview:
+                Intent intent3 = new Intent(MainActivity.this, EditViewActivity.class);
+                startActivity(intent3);
                 break;
         }
     }
