@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#af999f"
-    tools:context=".ProcessViewActivity">
-<com.ssy.ferryview.FerryProgressView
+    tools:context=".progressview.ProcessViewActivity">
+<com.ssy.ferryview.progressview.FerryProgressView
     android:id="@+id/progress_view"
     android:background="@color/colorAccent"
     android:layout_centerInParent="true"

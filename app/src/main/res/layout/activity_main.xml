@@ -12,5 +12,9 @@
       android:text="ProcessViewActivity"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"/>
-
+  <Button
+      android:id="@+id/btn_flowlayout"
+      android:text="FlowLayoutActivity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
 </LinearLayout>

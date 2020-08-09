@@ -1,9 +1,11 @@
-package com.ssy.ferryview;
+package com.ssy.ferryview.progressview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+
+import com.ssy.ferryview.R;
 
 public class ProcessViewActivity extends AppCompatActivity {
 

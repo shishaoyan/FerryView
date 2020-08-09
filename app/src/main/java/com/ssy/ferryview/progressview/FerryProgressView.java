@@ -1,4 +1,4 @@
-package com.ssy.ferryview;
+package com.ssy.ferryview.progressview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -11,6 +11,9 @@ import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.ssy.ferryview.R;
+import com.ssy.ferryview.Util;
 
 import androidx.annotation.Nullable;
 
@@ -41,7 +44,7 @@ public class FerryProgressView extends View {
         super(context, attrs);
         this.context = context;
 
-        TypedArray array = context.obtainStyledAttributes(attrs,R.styleable.FerryProgressView);
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.FerryProgressView);
         cicleWidth = array.getDimension(R.styleable.FerryProgressView_cicleWidth,0);
 
         defaultWidth = Util.dip2px(context, 200);
