@@ -17,7 +17,7 @@
 
 ### 2、FerryFlowLayout
 
-![FerryFlowLayout](/效果图/ferry_flowlayout/flowlayout.jpg)
+![FerryFlowLayout](/效果图/ferry_flowlayout/flowlayout.jpg){:height="50%" width="50%"}
 
 ### 3、FerryLoadingView
 
