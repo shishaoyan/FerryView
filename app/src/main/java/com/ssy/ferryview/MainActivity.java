@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.ssy.ferryview.flowlayout.FlowLayoutActivity;
+import com.ssy.ferryview.loadingview.LoadingActivity;
 import com.ssy.ferryview.progressview.ProcessViewActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_process).setOnClickListener(this);
         findViewById(R.id.btn_flowlayout).setOnClickListener(this);
+        findViewById(R.id.btn_loading).setOnClickListener(this);
 
     }
 
@@ -29,6 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case R.id.btn_flowlayout:
                 Intent intent1 = new Intent(MainActivity.this, FlowLayoutActivity.class);
                 startActivity(intent1);
+                break;
+                case R.id.btn_loading:
+                Intent intent2 = new Intent(MainActivity.this, LoadingActivity.class);
+                startActivity(intent2);
                 break;
         }
     }
