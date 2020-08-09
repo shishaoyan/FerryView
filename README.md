@@ -17,8 +17,8 @@
 
 ### 2、FerryFlowLayout
 
-![FerryFlowLayout](/效果图/ferry_flowlayout/flowlayout.jpg){:height="50%" width="50%"}
+![FerryFlowLayout](/效果图/ferry_flowlayout/flowlayout.jpg)
 
 ### 3、FerryLoadingView
 
-![FerryProcessView](/效果图/ferry_loadingview/1596967518414040.gif){:height="50%" width="50%"}
+![FerryProcessView-w150](/效果图/ferry_loadingview/1596967518414040.gif)
