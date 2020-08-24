@@ -13,6 +13,7 @@ import com.ssy.ferryview.editview.EditViewActivity;
 import com.ssy.ferryview.flowlayout.FlowLayoutActivity;
 import com.ssy.ferryview.loadingview.LoadingActivity;
 import com.ssy.ferryview.progressview.ProcessViewActivity;
+import com.ssy.ferryview.viewpager.ViewPagerActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_flowlayout).setOnClickListener(this);
         findViewById(R.id.btn_loading).setOnClickListener(this);
         findViewById(R.id.btn_editview).setOnClickListener(this);
+        findViewById(R.id.btn_viewpager).setOnClickListener(this);
 
     }
 
@@ -44,6 +46,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case R.id.btn_editview:
                 Intent intent3 = new Intent(MainActivity.this, EditViewActivity.class);
                 startActivity(intent3);
+                break;
+                case R.id.btn_viewpager:
+                Intent intent4 = new Intent(MainActivity.this, ViewPagerActivity.class);
+                startActivity(intent4);
                 break;
         }
     }

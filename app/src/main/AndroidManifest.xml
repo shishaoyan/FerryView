@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".editview.EditViewActivity"></activity>
+        <activity android:name=".viewpager.ViewPagerActivity"></activity>
+        <activity android:name=".editview.EditViewActivity" />
         <activity android:name=".loadingview.LoadingActivity" />
         <activity android:name=".flowlayout.FlowLayoutActivity" />
         <activity android:name=".progressview.ProcessViewActivity" />

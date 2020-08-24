@@ -8,16 +8,19 @@
     tools:context=".MainActivity">
 
   <Button
+      android:textAllCaps="false"
       android:id="@+id/btn_process"
       android:text="ProcessViewActivity"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"/>
   <Button
+      android:textAllCaps="false"
       android:id="@+id/btn_flowlayout"
       android:text="FlowLayoutActivity"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"/>
   <Button
+      android:textAllCaps="false"
       android:id="@+id/btn_loading"
       android:text="LoaidngActivity"
       android:layout_width="match_parent"
@@ -25,6 +28,12 @@
   <Button
       android:id="@+id/btn_editview"
       android:text="EditViewActivity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+  <Button
+      android:textAllCaps="false"
+      android:id="@+id/btn_viewpager"
+      android:text="ViewPager"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"/>
 </LinearLayout>
